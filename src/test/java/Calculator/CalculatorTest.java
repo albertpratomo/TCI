@@ -9,14 +9,15 @@ import static org.junit.Assert.*;
 @RunWith(JUnitParamsRunner.class)
 public class CalculatorTest {
 
-    private static final Object[] getVariables() {
+    //Happy variables = variables that are correct (will give correct results)
+    private static final Object[] getHappyVariables() {
         return new Object[] {
                 new Object[] {1, 2},
                 new Object[] {3, 4}
         };
     }
 
-    @Parameters(method = "getVariables")
+    @Parameters(method = "getHappyVariables")
     @Test
     public void canAddTwoIntegers(int first, int second) {
         //arrange
