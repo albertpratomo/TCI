@@ -1,6 +1,7 @@
 package SchoolCourse;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Course {
 
@@ -22,5 +23,19 @@ public class Course {
 
     public Date getEndDate() {
         return endDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Course course = (Course) o;
+        return Objects.equals(startDate, course.startDate) &&
+                Objects.equals(endDate, course.endDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(startDate, endDate);
     }
 }
