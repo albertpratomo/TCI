@@ -35,4 +35,15 @@ public class ChapterTest {
         // ASSERT
         assertTrue("Number should be a string of numbers and have 2 level maximum (e.g. 2.4)",result);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void wrongNameOrNumberWillThrowIllegalArgumentException(){
+        // ARRANGE
+        // Create SUT
+        Chapter SUT = new Chapter("Prologue","2.2.1");
+
+        // ACT
+
+        // ASSERT
+    }
 }
