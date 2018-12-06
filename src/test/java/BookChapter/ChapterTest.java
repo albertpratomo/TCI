@@ -13,12 +13,26 @@ public class ChapterTest {
     public void nameIsNotNullString(){
         // ARRANGE
         // Create SUT
-        Chapter SUT = new Chapter("Prologue",1);
+        Chapter SUT = new Chapter("Prologue","2");
 
         // ACT
 
         // ASSERT
         assertNotEquals("Name should not be a null string","",SUT.getName());
+    }
 
+    @Test
+    public void numberIsStringOfNumberAnd2LevelMaximum(){
+        // ARRANGE
+        // Create SUT
+        Chapter SUT = new Chapter("Prologue","2.2");
+        Boolean result = false;
+
+        // ACT
+        if (SUT.getNumber().matches("^\\d+(\\.\\d+)?$"))
+            result = true;
+
+        // ASSERT
+        assertTrue("Number should be a string of numbers and have 2 level maximum (e.g. 2.4)",result);
     }
 }

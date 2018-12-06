@@ -2,9 +2,9 @@ package BookChapter;
 
 public class Chapter {
     private String name;
-    private Integer number;
+    private String number;
 
-    public Chapter(String name, Integer number) {
+    public Chapter(String name, String number) {
         this.name = name;
         this.number = number;
     }
@@ -17,11 +17,11 @@ public class Chapter {
         this.name = name;
     }
 
-    public Integer getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(Integer number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 }
